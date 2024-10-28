@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie DB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <!-- berfinesenn/BE-28-create-login-page STARTED -->
+    <section class="login-page-container">
+      <div class="login-page">
+        <div class="left-side">
+          <a href="index.html" class="home-icon">
+            <img src="assets/images/login/Shape.png" alt="Home Icon" />
+          </a>
+
+          <img
+            class="welcome-logo"
+            src="assets/images/login/Logo.png"
+            alt="welcome-icon"
+          />
+          <p class="welcome-msj">Welcome back</p>
+          <p class="welcome-subtitle-msj">Please login to continue</p>
+        </div>
+        <div class="right-side">
+          <div class="login-right-head">
+            <h2 class="right-title">Login</h2>
+            <a class="create-account" href="/register.html">
+              <img
+                class="right-arrow"
+                src="assets/images/login/Close Icon.png"
+                alt="right-arrow"
+              />
+              Create new account
+            </a>
+          </div>
+          <div class="social-login">
+            <button class="facebook-btn">
+              <img
+                class="social-login-icon"
+                src="assets/images/login/social-facebook.png"
+                alt="Facebook"
+              />
+              <div class="social-text">Facebook</div>
+            </button>
+            <button class="twitter-btn">
+              <img
+                class="social-login-icon"
+                src="assets/images/login/social-twitter.png"
+                alt="Twitter"
+              />
+              <div class="social-text">Twitter</div>
+            </button>
+            <button class="google-btn">
+              <img
+                class="social-login-icon"
+                src="assets/images/login/social-google-outline.png"
+                alt="Google"
+              />
+              <div class="social-text">Google</div>
+            </button>
+          </div>
+          <div class="login-with-email">
+            <span class="line"></span>
+            <span>Or login with email</span>
+            <span class="line"></span>
+          </div>
+          <form
+            class="lg-form-inputs"
+            id="loginForm"
+            onsubmit="loginFormSubmitHandler(event)"
+            novalidate
+          >
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <span class="input-helper">Enter your email address</span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <span class="input-helper">Enter your password</span>
+            </div>
+            <div class="remember-forgot">
+              <label for="remember">
+                <input type="checkbox" id="remember" name="remember" />
+                Remember me
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="continue-btn">Continue</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div id="notification" class="notification"></div>
+
+    <!-- berfinesenn/BE-28-create-login-page FINISHED -->
+  </body>
+  <script src="js/login.js"></script>
+</html>

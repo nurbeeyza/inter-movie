@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie DB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Cokkie Banner Start-->
+    <div class="cooki-banner-container">
+      <div class="cookie-banner" id="cookieBanner">
+        <p class="cookie-text">
+          This is an example of a message that is commonly used for important
+          information to visitors or users. Please click the button beside to
+          close this message.
+        </p>
+
+        <button class="cookie-btn" id="cookieBtn">ACCEPT</button>
+      </div>
+    </div>
+
+    <!-- Cokkie Banner End -->
+    <!--Dark-Light Mode Section Start-->
+    <div class="theme-toggle">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </div>
+    <!--Dark-Light Mode Section End-->
+    <!-- melikeaksoy/BE-5-Header-section start -->
+    <header class="header">
+      <!-- Hamburger Menü -->
+      <div class="hamburger-menu" id="hamburger-menu">☰</div>
+
+      <div class="header-left">
+        <img
+          class="fashion-logo"
+          src="assets/icons/Luxi-Fashion-Logo.svg"
+          alt="logo"
+        />
+
+        <ul class="nav-links">
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Featured</a></li>
+          <li><a href="#">Top Categories</a></li>
+          <li><a href="#">All Categories</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobil Menü -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Featured</a></li>
+          <li><a href="#">Top Categories</a></li>
+          <li><a href="#">All Categories</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a class="register" href="register.html">REGISTER</a></li>
+        </ul>
+      </div>
+
+      <div class="header-right">
+        <a class="login" href="login.html">LOGIN</a>
+        <a class="register" href="register.html">REGISTER</a>
+        <div class="settings-menu">
+          <img
+            class="theme-settings"
+            src="assets/icons/android-settings.svg"
+            alt="logo"
+          />
+
+          <div class="menu-hidden">
+            <div class="language-header">
+              <p>Language</p>
+              <ul>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Deutsch</a></li>
+                <li><a href="#">Turkish</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- melikeaksoy/BE-5-Header-section end -->
+    <!--berfinesenn/BE-11-hero-section STARTED-->
+    <section class="hero-section">
+      <div class="hero-overlay">
+        <div class="teaser-background">
+          <video id="myVideo" width="630" height="472" controls autoplay muted>
+            <source src="assets/videos/trailer.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="bottom-shape">
+            <svg
+              data-name="bottom shape"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                class="shape-fill"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <p id="movieOverview">Watch here and on the app across your devices.</p>
+        <h1 id="movieTitle">TENET</h1>
+        <p id="releaseDate">On the air: 01.11.20</p>
+      </div>
+      <div class="hero-button">
+        <p class="hero-button-1">
+          WATCH
+          <button class="teaser-trailer-btn" id="playPauseBtn">
+            <img
+              class="play-btn"
+              src="images/hero-section/play-button.png"
+              alt="play button"
+            />
+            <img
+              class="pause-btn"
+              src="images/hero-section/pause.png"
+              alt="pause button"
+              style="display: none"
+            />
+          </button>
+          TRAILER
+        </p>
+      </div>
+    </section>
+    <!--Ebru Trending Movies Section Start-->
+    <section>
+      <div class="trending-movies-container">
+        <button class="prev"></button>
+        <button class="next"></button>
+        <div class="trend-movies-slider">
+          <div class="trend-movies-slide">
+            <div class="blur-background"></div>
+            <div class="trend-movie-details" id="slide1"></div>
+            <div class="trend-movie-buttons">
+              <button class="trailer-btn">WATCH TRAILER</button>
+              <button class="full-movie-btn">WATCH FULL MOVIE</button>
+            </div>
+            <div class="trend-movie-poster" id="poster1"></div>
+          </div>
+          <!-- Second Slide -->
+          <div class="trend-movies-slide">
+            <div class="blur-background"></div>
+            <div class="trend-movie-details" id="slide2"></div>
+            <div class="trend-movie-buttons">
+              <button class="trailer-btn">WATCH TRAILER</button>
+              <button class="full-movie-btn">WATCH FULL MOVIE</button>
+            </div>
+            <div class="trend-movie-poster" id="poster2"></div>
+          </div>
+          <!-- Third Slide -->
+          <div class="trend-movies-slide">
+            <div class="blur-background"></div>
+            <div class="trend-movie-details" id="slide3"></div>
+            <div class="trend-movie-buttons">
+              <button class="trailer-btn">WATCH TRAILER</button>
+              <button class="full-movie-btn">WATCH FULL MOVIE</button>
+            </div>
+            <div class="trend-movie-poster" id="poster3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Ebru Trending Movies Section End-->
+
+    <!--Beyzanurmete Implement the most watched Section Start -->
+    <section>
+      <div class="featured-movies-container">
+        <div class="movie-text-container">
+          <h1 class="featured">
+            Featured <span class="highlight">Movies</span>
+          </h1>
+          <p class="movie-description">
+            Watch and download full film, seasons and episodes movies & TV shows
+            online or stream right to your smart TV, game console, PC, Mac,
+            mobile, tablet and more.
+          </p>
+        </div>
+        <div class="movie-image-container">
+          <div class="movie-box">
+            <div class="button-play" data-movie="for-all-mankind">
+              <img src="images/BE-13/play.svg" />
+            </div>
+            <div class="gradient"></div>
+            <div class="movie-box-new">NEW</div>
+            <img
+              src="images/BE-13/movie2_cxxamr.jpg"
+              alt="Movie 1"
+              class="movie-image"
+            />
+            <div class="movie-overlay">For All Mankind</div>
+          </div>
+          <div class="movie-box">
+            <div class="button-play" data-movie="for-all-mankind">
+              <img src="images/BE-13/play.svg" />
+            </div>
+            <div class="gradient"></div>
+            <div class="movie-box-new">NEW</div>
+            <img
+              src="images/BE-13/movie3_a5wvov.png"
+              alt="Movie 2"
+              class="movie-image"
+            />
+            <div class="movie-overlay">Preshistoric Planet</div>
+          </div>
+          <div class="movie-box">
+            <div class="button-play" data-movie="for-all-mankind">
+              <img src="images/BE-13/play.svg" />
+            </div>
+            <div class="gradient"></div>
+            <div class="movie-box-new">NEW</div>
+            <img
+              src="images/BE-13/movie4_gsfgzx.jpg"
+              alt="Movie 3"
+              class="movie-image"
+            />
+            <div class="movie-overlay">Lovely Little Farm</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Beyzanurmete Implement the most watched Section End -->
+
+    <!-- melikeaksoy/BE-15-implement-promotion-banner start -->
+    <section class="promotion-banner">
+      <div class="promotion-main">
+        <!-- <img class="background-rectangle" src="assets/icons/Rectangle.svg" alt="Background"/> -->
+        <div class="first-card">
+          <img
+            class="img-card-1"
+            src="assets/images/Promo-card-1.png"
+            alt="Promo card 1"
+          />
+          <div class="card-1-subtitles">
+            <p class="card-1-subtitle-1">FREE</p>
+            <p class="card-1-subtitle-2">RENT 3 DAYS</p>
+          </div>
+        </div>
+
+        <div class="second-card">
+          <img
+            class="img-card-2"
+            src="assets/images/Promo-card-2.png"
+            alt="Promo card 2"
+          />
+          <div class="icon-included">
+            <div class="icon-included-first-line">
+              <img
+                class="img-card-icon"
+                src="assets/icons/coffee.svg"
+                alt="Coffee"
+              />
+              <p class="card-2-subtitle-1">FREE</p>
+            </div>
+            <p class="card-2-subtitle-2">MOVIES</p>
+          </div>
+        </div>
+
+        <div class="third-card">
+          <img
+            class="img-card-3"
+            src="assets/images/Promo-card-3.png"
+            alt="Promo card 3"
+          />
+          <div class="card-3-subtitles">
+            <p class="card-3-subtitle-1">FREE</p>
+            <p class="card-3-subtitle-2">UP TO 5 EPISODES</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- melikeaksoy/BE-15-implement-promotion-banner end -->
+
+    <!-- top-categories-section-start -->
+    <section class="top-categories-section">
+      <div class="top-categories">
+        <div class="top-section">
+          <div class="top-section-title">
+            <p class="primary-title">Top</p>
+            <p class="secondary-title">Categories</p>
+          </div>
+          <div class="top-secondary-section">
+            <div class="academy-categories">
+              <div class="academy-categories-right">
+                <img
+                  class="awards-img"
+                  src="assets/images/top-categories/cat1.png"
+                  alt="cat1-img"
+                />
+              </div>
+              <div class="academy-categories-text">
+                <h1 class="academy-categories-name">Academy Awards</h1>
+                <h2 class="academy-categories-info">24 Films</h2>
+              </div>
+            </div>
+            <div class="animations-categories">
+              <div class="animations-categories-right">
+                <img
+                  class="animations-img"
+                  src="assets/images/top-categories/cat2.png"
+                  alt="cat2-img"
+                />
+              </div>
+              <div class="animations-categories-text">
+                <h3 class="animations-categories-name">Animations</h3>
+                <h4 class="animations-categories-info">24 Films</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="middle-section">
+            <div class="actions-categories">
+              <div class="actions-categories-text">
+                <h5 class="actions-categories-name">Actions</h5>
+                <p class="actions-categories-info">24 Films</p>
+                <button class="actions-categories-buton">EXPLORE</button>
+              </div>
+              <div class="actions-categories-right">
+                <img
+                  class="actions-img"
+                  src="assets/images/top-categories/cat3.png"
+                  alt="cat3-img"
+                />
+              </div>
+              <img
+                class="actions-categories-background"
+                src="assets/images/top-categories/cat3-arkaplan.png"
+                alt="cat5-arkaplan-img"
+              />
+            </div>
+            <div class="secondary-subsection">
+              <div class="romance-categories">
+                <div class="romance-categories-text">
+                  <h5 class="romance-categories-name">
+                    Romance <br />
+                    Drama
+                  </h5>
+                  <p class="romance-categories-info">24 Films</p>
+                </div>
+                <img
+                  class="romance-img"
+                  src="assets/images/top-categories/cat4.png"
+                  alt="cat4-img"
+                />
+              </div>
+              <div class="comedy-categories">
+                <div class="comedy-categories-text">
+                  <h5 class="comedy-categories-name">Commedy</h5>
+                  <p class="comedy-categories-info">24 Films</p>
+                </div>
+                <div class="comedy-categories-right">
+                  <img
+                    class="comedy-img"
+                    src="assets/images/top-categories/cat5.png"
+                    alt="cat5-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heroes-categories">
+            <div class="heroes-categories-left">
+              <div class="heroes-categories-text">
+                <h5 class="heroes-categories-name">Super Heroes</h5>
+                <p class="heroes-categories-info">24 Films</p>
+              </div>
+              <button class="heroes-categories-buton">EXPLORE</button>
+            </div>
+            <img
+              class="heroes-img-background"
+              src="assets/images/top-categories/cat6-arkaplan.png"
+              alt="cat6-arkaplan-img"
+            />
+            <div class="heroes-categories-right">
+              <img
+                class="heroes-img"
+                src="assets/images/top-categories/cat6.png"
+                alt="cat6-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- top-categories-section-finish -->
+    <!--melisa/BE-2-Implement-the-all-categories-section start-->
+    <section class="all-categories">
+      <div class="all-title">
+        <h3 class="all-text">All</h3>
+        <br />
+        <h3 class="categories-text">Categories</h3>
+      </div>
+
+      <div class="slider-container">
+        <button id="prev" class="arrow-left">&#8592;</button>
+        <div class="categories-wrapper">
+          <div class="categories">
+            <!-- Kategori öğeleri -->
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/superheroes.png" alt="Super Heroes" />
+              </div>
+              <p class="category-text">SUPER HEROES</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/action.png" alt="Actions" />
+              </div>
+              <p class="category-text">ACTIONS</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/hollywood.png" alt="Hollywood" />
+              </div>
+              <p class="category-text">HOLLYWOOD</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/romantic.png" alt="Romantic" />
+              </div>
+              <p class="category-text">ROMANTIC</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/scifi.png" alt="Sci-Fi" />
+              </div>
+              <p class="category-text">SCI-FI</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/comedy.png" alt="Comedy" />
+              </div>
+              <p class="category-text">COMEDY</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/adventure.png" alt="Adventure" />
+              </div>
+              <p class="category-text">ADVENTURE</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/criminal.png" alt="Criminal" />
+              </div>
+              <p class="category-text">CRIMINAL</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/documentary.png" alt="Documentary" />
+              </div>
+              <p class="category-text">DOCUMENTARY</p>
+            </div>
+
+            <div class="category-wrapper">
+              <div class="category">
+                <img src="assets/images/musical.png" alt="Musical" />
+              </div>
+              <p class="category-text">MUSICAL</p>
+            </div>
+          </div>
+        </div>
+        <button id="next" class="arrow-right">&#8594;</button>
+      </div>
+    </section>
+    <!--melisa/BE-2-Implement-the-all-categories-section end-->
+    <!-- berfinesenn/BE-18-implement-the-pricing-plan-section STARTED-->
+    <section>
+      <div class="pricing-table">
+        <img class="wave" src="images/Rectangle.png" alt="wave" />
+        <div class="pricing-table-title">
+          <h2 class="primary-title">Flexible</h2>
+          <h2 class="secondary-title">Pricing and Plan</h2>
+        </div>
+        <div class="pricing-plan">
+          <div class="bcard basic">
+            <div class="title-card">
+              <p class="pr-bsc">BASİC</p>
+              <h4 class="cost-1">Free</h4>
+            </div>
+            <ul class="no-bullets">
+              <li>Free to watch sports</li>
+              <li>Original Series Videos</li>
+              <li>Hollywood and local films</li>
+            </ul>
+            <div class="button-area">
+              <p class="statement">
+                Can be watched on 1 device at the same time.
+              </p>
+              <div class="basic-btn">
+                <button class="basic-btn-1">CHOOSE PLAN</button>
+              </div>
+            </div>
+          </div>
+          <div class="bcard best-value">
+            <div class="title-card title-card-1">
+              <p class="pr-bv">BEST VALUE</p>
+              <h4 class="cost-2">$24</h4>
+            </div>
+            <ul class="no-bullets">
+              <li>International TV</li>
+              <li>Includes F1 and EPL</li>
+              <li>Watch ad-free videos</li>
+              <li>Get bonus Video Points for every platinum</li>
+              <li>Early Bird Diamond Package at a more affordable price</li>
+            </ul>
+            <div class="button-area">
+              <p class="statement">
+                The application can still be accessed without a subscription
+                plan.
+              </p>
+              <div class="basic-btn">
+                <button class="basic-btn-0">CHOOSE PLAN</button>
+              </div>
+            </div>
+          </div>
+          <div class="bcard pro">
+            <div class="title-card">
+              <p class="pr-pr">PRO</p>
+              <h4 class="cost-3">$54</h4>
+            </div>
+            <ul class="no-bullets">
+              <li>All Platinum shows</li>
+              <li>Includes all Platinum content</li>
+              <li>Watch ad-free videos</li>
+              <li>Platinum Shows</li>
+              <li>
+                Get a bonus Vidio SF loyalty point for every platinum purchase
+              </li>
+            </ul>
+            <div class="button-area">
+              <p class="statement">
+                Subscription auto-renewal can be canceled at any time.
+              </p>
+              <div class="basic-btn">
+                <button class="basic-btn-0">CHOOSE PLAN</button>
+              </div>
+            </div>
+          </div>
+          <div class="bcard enterprise">
+            <div class="title-card">
+              <p class="pr-pr">ENTERPRİSE</p>
+              <h4 class="cost-4">$99</h4>
+            </div>
+            <ul class="no-bullets">
+              <li>All Platinum shows</li>
+              <li>Includes all Platinum content</li>
+              <li>Watch ad-free videos</li>
+              <li>Get bonus Video Points for every platinum</li>
+              <li>Early Bird Diamond Package at a more affordable price</li>
+            </ul>
+            <div class="button-area">
+              <p class="statement">
+                Subscribing to Premier will still use the quota to watch.
+              </p>
+              <div class="basic-btn">
+                <button class="basic-btn-0">CHOOSE PLAN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- berfinesenn/BE-18-implement-the-pricing-plan-section  FİNİSHED-->
+    <!-- Beyza FAQ Section Start -->
+    <section class="implement-the-faq">
+      <div class="big-container">
+        <div class="left-content">
+          <div>
+            <div class="title title-1">Frequently</div>
+            <div class="title title-2">Answered Questions</div>
+          </div>
+          <p class="paragraph">
+            Have a question? Check out our frequently asked questions to find
+            your answer.
+          </p>
+          <img
+            src="images/Decoration.png"
+            alt="Description of image"
+            class="faq-image"
+          />
+        </div>
+        <div class="right-content">
+          <div class="right-relative-box">
+            <div class="collab-box">
+              How much does Movie App cost?
+              <img src="images/Shape1.svg" />
+            </div>
+            <div class="hidden-content">
+              <p>
+                Plans range from USD 5.4 to USD 18.6 a month. No extra costs, no
+                contracts.
+              </p>
+            </div>
+          </div>
+
+          <div class="right-relative-box">
+            <div class="collab-box">
+              Where can I watch?
+              <img src="images/Shape1.svg" />
+            </div>
+            <div class="hidden-content">
+              <p>
+                Watch anywhere, anytime. Sign in with your account to watch
+                instantly on the web from your personal computer.
+              </p>
+            </div>
+          </div>
+
+          <div class="right-relative-box">
+            <div class="collab-box">
+              How do I cancel?
+              <img src="images/Shape1.svg" />
+            </div>
+            <div class="hidden-content">
+              <p>
+                There are no pesky contracts and no commitments. You can easily
+                cancel your account online in two clicks.
+              </p>
+            </div>
+          </div>
+          <div class="right-relative-box">
+            <div class="collab-box">
+              What can I watch on this platform?
+              <img src="images/Shape1.svg" />
+            </div>
+            <div class="hidden-content">
+              <p>
+                It has an extensive library of feature films, documentaries, TV
+                shows, anime, award-winning Netflix originals, and more
+              </p>
+            </div>
+          </div>
+          <div class="right-relative-box">
+            <div class="collab-box">
+              Is it good for kids?
+              <img src="images/Shape1.svg" />
+            </div>
+            <div class="hidden-content">
+              <p>
+                The Kids experience is included in your membership to give
+                parents control while kids enjoy family-friendly TV shows and
+                movies in their own space.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Beyza FAQ Section End -->
+    <!-- News and Events Section Start-->
+    <section>
+      <div class="slider-container2">
+        <div class="news-slider" id="news-slider">
+          <div class="news-card">
+            <img src="images/1.jpg" alt="Image 1" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">NEWS</h5>
+              <p class="news-card-text">
+                Your yearly review should be an opportunity,not a chore.Drop the
+                politics and have real conversation.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/10.jpg" alt="Image 2" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">NEWS</h5>
+              <p class="news-card-text">
+                The suprising secret ingredient of transformational leadership.
+                Turns out,investing in your own personal happiness can uplift
+                your team,too
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/17.jpg" alt="Image 3" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">NEWS</h5>
+              <p class="news-card-text">
+                Whether you dread what the future holds for workers on embrace
+                it with open arms,there is a lot to know and discover.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/6.jpg" alt="Image 4" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">NEWS</h5>
+              <p class="news-card-text">
+                Here is how our Chief Revenue Office approaches the
+                chicken-or-egg question every SaaS company face.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/7.jpg" alt="Image 4" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">EVENTS</h5>
+              <p class="news-card-text">
+                Find out which team members are dominant
+                influencers,conscientious,or steady.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/20.jpg" alt="Image 4" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">EVENTS</h5>
+              <p class="news-card-text">
+                Why your company's security will depend on empathy and team
+                collabration in 2022.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="images/1.jpg" alt="Image 1" class="news-card-image" />
+            <div class="news-card-content">
+              <h5 class="news-card-header">NEWS</h5>
+              <p class="news-card-text">
+                Your yearly review should be an opportunity,not a chore.Drop the
+                politics and have real conversation.
+              </p>
+              <button class="read-more">READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+    <!-- News and Event Section End -->
+
+    <!--Footer Section Reception Start-->
+    <section class="footer-section-background">
+      <section>
+        <div class="footer-section-reception">
+          <h4 class="footer-section-title">
+            <strong>What are you waiting for?</strong>
+          </h4>
+          <button class="footer-section-started-btn">
+            <strong>GET STARTED</strong>
+          </button>
+        </div>
+      </section>
+      <!--Footer Section Reception End-->
+
+      <!--Footer Section-2 Start-->
+      <footer class="footer-section-2-conteiner">
+        <div class="footer-section-2">
+          <div class="footer-section-first-box">
+            <div>
+              <img src="assets/images/footer/Luxi-Saas-Logo.svg" alt="#" />
+              <h6>Movie</h6>
+            </div>
+            <p>@ Alexstrap Movie 2022</p>
+          </div>
+
+          <div class="footer-section-second-box">
+            <div class="second-box-first-div">
+              <h6>COMPANY</h6>
+              <ul>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Locations</a></li>
+              </ul>
+            </div>
+
+            <div class="second-box-second-div">
+              <h6>SERVICES</h6>
+              <ul>
+                <li><a href="#">Resource</a></li>
+                <li><a href="#">Resource name</a></li>
+                <li><a href="#">Another resource</a></li>
+                <li><a href="#">Final resource</a></li>
+              </ul>
+            </div>
+
+            <div class="second-box-third-div">
+              <h6>LEGAL</h6>
+              <ul>
+                <li><a href="#">Privacy policy</a></li>
+                <li>
+                  <a href="#"><li>Terms of us</li></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-section-second-box-responsiveness">
+            <div class="dropdown">
+              <div class="second-box-btn">
+                <h6 class="dropdown-button">COMPANY</h6>
+                <img
+                  class="footer-img-responsiveness"
+                  src="/assets/images/footer/Responsiveness second-box-item.svg"
+                />
+              </div>
+              <ul class="dropdown-list">
+                <li><a class="dropdown-item" href="#">Team</a></li>
+                <li><a class="dropdown-item" href="#">History</a></li>
+                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                <li><a class="dropdown-item" href="#">Locations</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <div class="second-box-btn">
+                <h6 class="dropdown-button">SERVICES</h6>
+                <img
+                  class="footer-img-responsiveness"
+                  src="/assets/images/footer/Responsiveness second-box-item.svg"
+                />
+              </div>
+              <ul class="dropdown-list">
+                <li><a class="dropdown-item" href="#">Resource</a></li>
+                <li><a class="dropdown-item" href="#">Resource name</a></li>
+                <li><a class="dropdown-item" href="#">Another resource</a></li>
+                <li><a class="dropdown-item" href="#">Company</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <div class="second-box-btn">
+                <h6 class="dropdown-button">LEGAL</h6>
+                <img
+                  class="footer-img-responsiveness"
+                  src="/assets/images/footer/Responsiveness second-box-item.svg"
+                />
+              </div>
+              <ul class="dropdown-list">
+                <li><a class="dropdown-item" href="#">Privacy policy</a></li>
+                <li><a class="dropdown-item" href="#">Terms of us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-section-third-box">
+            <div class="social-media">
+              <button>
+                <a
+                  ><img src="assets/images/footer/social-facebook.svg" alt="#"
+                /></a>
+              </button>
+              <button>
+                <a
+                  ><img src="assets/images/footer/social-linkedin.svg" alt="#"
+                /></a>
+              </button>
+              <button>
+                <a
+                  ><img src="assets/images/footer/social-twitter.svg" alt="#"
+                /></a>
+              </button>
+              <button>
+                <a
+                  ><img src="assets/images/footer/social-instagram.svg" alt="#"
+                /></a>
+              </button>
+            </div>
+
+            <div class="select">
+              <select class="language">
+                <option selected disabled->English - En</option>
+                <option value="Deutsch">Deutsch - De</option>
+                <option value="Türkçe">Türkçe - Tr</option>
+              </select>
+            </div>
+          </div>
+          <div class="for-responsive-div-1-text">
+            <p>@ Alexstrap Movie 2022</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!--Footer Section-2 End-->
+  </body>
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/config.js"></script>
+</html>

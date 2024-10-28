@@ -1,0 +1,134 @@
+h1 {
+  margin-bottom: 50px;
+}
+
+.all-categories {
+  position: relative;
+}
+
+.all-text {
+  font-size: 33px;
+  color: #dcdcdc;
+}
+
+.categories-text {
+  font-size: 40px;
+  color: #c5cae9;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.categories-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.categories {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.category-wrapper {
+  flex: 0 0 16.6667%; /* 100% / 6 = ~16.6667% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.category {
+  background: linear-gradient(45deg, #ff007f, #5a00ff);
+  border-radius: 15px;
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+
+.category img {
+  width: 90px;
+  height: 90px;
+}
+
+.category-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.arrow-left,
+.arrow-right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.arrow-left {
+  left: 0px;
+}
+
+.arrow-right {
+  right: 0px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+/* Responsive Tasarım için */
+@media (max-width: 1200px) {
+  .category-wrapper {
+    flex: 0 0 20%; /* 5 öğe */
+  }
+}
+
+@media (max-width: 992px) {
+  .category-wrapper {
+    flex: 0 0 25%; /* 4 öğe */
+  }
+}
+
+@media (max-width: 768px) {
+  .category-wrapper {
+    flex: 0 0 33.3333%; /* 3 öğe */
+  }
+}
+
+@media (max-width: 576px) {
+  .category-wrapper {
+    flex: 0 0 50%; /* 2 öğe */
+  }
+}
+/*Melisa end*/

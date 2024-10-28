@@ -1,0 +1,356 @@
+/* berfinesenn/BE-28-login-page*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #880e4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/login-page/login-register-bg-left.svg),
+    url(/images/login-page/login-register-bg-right.svg);
+  background-size: contain;
+  background-position: left, right;
+  background-repeat: no-repeat;
+  padding: 0 35px;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.login-page-container {
+  height: 90vh;
+  width: 1200px;
+  background: transparent;
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  background: linear-gradient(135deg, #ff007f, #ff477e, 0);
+  width: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+}
+
+.left-side .home-icon {
+  width: 32px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.welcome-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome-msj {
+  font-size: 52px;
+}
+
+.welcome-subtitle-msj {
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.right-side {
+  width: 700px;
+  padding: 40px;
+  background-color: #424242;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.right-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.create-account {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.create-account img {
+  width: 15px;
+  margin-right: 6px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-login button {
+  width: 30%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-login-icon {
+  margin-right: 8px;
+  width: 18px;
+  height: auto;
+}
+
+.facebook-btn {
+  background-color: #4267b2;
+  color: white;
+}
+
+.facebook-btn:hover {
+  background-color: #365899;
+}
+
+.twitter-btn {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.twitter-btn:hover {
+  background-color: #0d95e8;
+}
+
+.google-btn {
+  background-color: #db4437;
+  color: white;
+}
+
+.google-btn:hover {
+  background-color: #c23321;
+}
+
+.login-with-email {
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+}
+
+.login-with-email span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ccc;
+  display: block;
+  position: relative;
+}
+
+.line {
+  flex-grow: 2;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #424242;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: rgba(48, 79, 254, 1);
+  outline: none;
+}
+
+.input-helper {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(48, 79, 254, 1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: rgba(48, 79, 254, 1);
+}
+
+/* RESPONSİVE DESİGN */
+
+@media (max-width: 1024px) {
+  .login-page-container {
+    padding: 0;
+    width: 90vw;
+  }
+
+  .left-side {
+    width: 400px;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 890px) {
+  .login-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-title {
+    font-size: 20px;
+  }
+
+  .create-account {
+    font-size: 10px;
+  }
+
+  .login-with-email span {
+    font-size: 12px;
+  }
+
+  .remember-forgot label {
+    font-size: 10px;
+  }
+
+  .forgot-password {
+    font-size: 10px;
+  }
+  .continue-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .social-text {
+    display: none;
+  }
+}
+
+.notification {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.5s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+.notification.warning {
+  background-color: #ff9800;
+}
+
+.notification.info {
+  background-color: #2196f3;
+}
+
+/* berfinesenn/BE-28-login-page */
